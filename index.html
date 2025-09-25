@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mia Tamm — Atlassian Consultant</title>
-  <meta name="description" content="Mia Tamm offers freelance consulting to help companies implement solutions in the Atlassian ecosystem." />
-  <meta name="theme-color" content="#0b1220" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { ink: '#0b1220', sky: '#0ea5e9' }
-        }
-      }
-    }
-  </script>
-  <!-- Amplitude Analytics -->
-    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mia Tamm — Atlassian Consultant</title>
+    <meta name="description" content="Mia Tamm offers freelance consulting to help companies implement solutions in the Atlassian ecosystem." />
+    <meta name="theme-color" content="#0b1220" />
+  
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    const AMPLITUDE_API_KEY = "2bd7e57518db4237d4ee26b214c41529";
-        if (window.amplitude && typeof window.amplitude.init === "function") {
-            window.amplitude.init(AMPLITUDE_API_KEY, {
+    tailwind.config = {
+        theme: { extend: { colors: { ink: '#0b1220', sky: '#0ea5e9' } } }
+    }
+    </script>
+  
+    <!-- Amplitude Analytics -->
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js"
+            onload="amplitude.init('2bd7e57518db4237d4ee26b214c41529', {
             serverZone: 'EU',
-            defaultTracking: {
-                pageViews: true,
-                sessions: true,
-                fileDownloads: true,
-                formInteractions: true
-            }
-        });
-        } else {
-            console.warn("[Amplitude] SDK failed to load or init function missing");
-        }
+            defaultTracking: { pageViews: true, sessions: true, fileDownloads: true, formInteractions: true }
+        });">
     </script>
 </head>
 <body class="bg-white text-slate-900">
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-      <span class="font-semibold tracking-tight text-lg">— Mia Tamm</span>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#about" class="hover:text-sky">About</a>
-        <a href="#services" class="hover:text-sky">Services</a>
-        <a href="#clients" class="hover:text-sky">Clients</a>
-        <a href="#contact" class="hover:text-sky">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/80 border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <span class="font-semibold tracking-tight text-lg">— Mia Tamm</span>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#about" class="hover:text-sky">About</a>
+            <a href="#services" class="hover:text-sky">Services</a>
+            <a href="#clients" class="hover:text-sky">Clients</a>
+            <a href="#contact" class="hover:text-sky">Contact</a>
+        </nav>
+        </div>
+    </header>
 
-  <!-- Hero -->
-  <section id="home" class="bg-ink text-white">
-    <div class="max-w-5xl mx-auto px-4 py-20 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Freelance Atlassian Consulting</h1>
-      <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">I work with companies to design, implement, and improve solutions using Confluence, Jira, and Marketplace apps. As a freelance consultant, I bring hands‑on experience and practical advice to each project.</p>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section id="home" class="bg-ink text-white">
+        <div class="max-w-5xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Freelance Atlassian Consulting</h1>
+        <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">I work with companies to design, implement, and improve solutions using Confluence, Jira, and Marketplace apps. As a freelance consultant, I bring hands‑on experience and practical advice to each project.</p>
+        </div>
+    </section>
 
-  <!-- About -->
+    <!-- About -->
     <section id="about" class="max-w-5xl mx-auto px-4 py-16">
         <div class="grid gap-10 lg:grid-cols-2 items-start">
             <div>
@@ -77,7 +65,7 @@
         </div>
     </section>
 
-  <!-- Services -->
+    <!-- Services -->
     <section id="services" class="bg-slate-50 border-y border-slate-200">
         <div class="max-w-5xl mx-auto px-4 py-16">
             <h2 class="text-3xl font-bold tracking-tight">Services</h2>
@@ -99,27 +87,27 @@
         </div>
     </section>
 
-  <!-- Clients -->
-  <section id="clients" class="max-w-5xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold tracking-tight">Clients</h2>
-    <p class="mt-4 text-slate-700 max-w-3xl">I’ve worked with different types of companies in the Atlassian ecosystem — from small SaaS vendors to large enterprises. Each collaboration has been focused on solving specific problems: reducing support tickets with better documentation, scaling Confluence spaces with governance models, and driving adoption of Marketplace apps.</p>
-  </section>
+    <!-- Clients -->
+    <section id="clients" class="max-w-5xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold tracking-tight">Clients</h2>
+        <p class="mt-4 text-slate-700 max-w-3xl">I’ve worked with different types of companies in the Atlassian ecosystem — from small SaaS vendors to large enterprises. Each collaboration has been focused on solving specific problems: reducing support tickets with better documentation, scaling Confluence spaces with governance models, and driving adoption of Marketplace apps.</p>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-ink text-white">
-    <div class="max-w-5xl mx-auto px-4 py-16 text-center">
-      <h2 class="text-3xl font-bold tracking-tight">Get in touch</h2>
-      <p class="mt-4 text-slate-300">For consulting inquiries, reach me directly by email:</p>
-      <p class="mt-6 text-lg"><a class="underline decoration-sky/60 hover:opacity-80" href="mailto:hello@tamm.consulting" onclick="amplitude.getInstance().track('Contact Email Clicked');">hello@tamm.consulting</a></p>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="bg-ink text-white">
+        <div class="max-w-5xl mx-auto px-4 py-16 text-center">
+        <h2 class="text-3xl font-bold tracking-tight">Get in touch</h2>
+        <p class="mt-4 text-slate-300">For consulting inquiries, reach me directly by email:</p>
+        <p class="mt-6 text-lg"><a class="underline decoration-sky/60 hover:opacity-80" href="mailto:hello@tamm.consulting" onclick="amplitude.getInstance().track('Contact Email Clicked');">hello@tamm.consulting</a></p>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <span>© <span id="year"></span> Mia Tamm — Tamm.consulting</span>
-    </div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+        <span>© <span id="year"></span> Mia Tamm — Tamm.consulting</span>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
