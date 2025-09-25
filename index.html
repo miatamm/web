@@ -17,44 +17,22 @@
     }
   </script>
   <!-- Amplitude Analytics -->
-    <script type="text/javascript">
-    (function(e,t){
-        var n=e.amplitude||{_q:[],_iq:{}};
-        var r=t.createElement("script");
-        r.type="text/javascript";
-        r.async=true;
-        r.src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js.gz";
-        r.onload=function(){
-        if(e.amplitude.runQueuedFunctions){
-            e.amplitude.runQueuedFunctions();
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js"></script>
+    <script>
+    const AMPLITUDE_API_KEY = "2bd7e57518db4237d4ee26b214c41529";
+        if (window.amplitude && typeof window.amplitude.init === "function") {
+            window.amplitude.init(AMPLITUDE_API_KEY, {
+            serverZone: 'EU',
+            defaultTracking: {
+                pageViews: true,
+                sessions: true,
+                fileDownloads: true,
+                formInteractions: true
+            }
+        });
         } else {
-            console.log("[Amplitude] Error: could not load SDK");
+            console.warn("[Amplitude] SDK failed to load or init function missing");
         }
-        };
-        var i=t.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(r,i);
-        function s(e,t){
-        e.prototype[t]=function(){
-            this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
-            return this;
-        };
-        }
-        var o=function(){this._q=[];return this;};
-        var a=["add","append","clearAll","prepend","set","setOnce","unset"];
-        for(var u=0;u<a.length;u++){s(o,a[u]);}
-        n.Identify=o;
-        var c=function(){this._q=[];return this;};
-        var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
-        for(var p=0;p<l.length;p++){s(c,l[p]);}
-        n.Revenue=c;
-        n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
-        if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};}
-        return n._iq[e];
-        };
-        e.amplitude=n;
-    })(window,document);
-
-    amplitude.getInstance().init("2bd7e57518db4237d4ee26b214c41529");
     </script>
 </head>
 <body class="bg-white text-slate-900">
@@ -132,7 +110,7 @@
     <div class="max-w-5xl mx-auto px-4 py-16 text-center">
       <h2 class="text-3xl font-bold tracking-tight">Get in touch</h2>
       <p class="mt-4 text-slate-300">For consulting inquiries, reach me directly by email:</p>
-      <p class="mt-6 text-lg"><a class="underline decoration-sky/60 hover:opacity-80" href="mailto:hello@tamm.consulting">hello@tamm.consulting</a></p>
+      <p class="mt-6 text-lg"><a class="underline decoration-sky/60 hover:opacity-80" href="mailto:hello@tamm.consulting" onclick="amplitude.getInstance().track('Contact Email Clicked');">hello@tamm.consulting</a></p>
     </div>
   </section>
 
