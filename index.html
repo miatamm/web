@@ -16,14 +16,12 @@
     </script>
   
     <!-- Amplitude Analytics -->
-    <script src="https://cdn.eu.amplitude.com/script/2bd7e57518db4237d4ee26b214c41529.js"></script>
+    <script src="https://cdn.eu.amplitude.com/script/2bd7e57518db4237d4ee26b214c41529.js" crossorigin="anonymous"></script>
     <script>
     window.amplitude.init('2bd7e57518db4237d4ee26b214c41529', {
-        serverZone: 'EU',        
-        defaultTracking: {       
-        pageViews: true,
-        sessions: true
-        }
+        serverZone: 'EU',
+        fetchRemoteConfig: true,
+        autocapture: true
     });
     </script>
 </head>
