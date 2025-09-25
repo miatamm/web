@@ -16,13 +16,15 @@
     </script>
   
     <!-- Amplitude Analytics -->
-    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js" crossorigin="anonymous"
-        onload="amplitude.init('2bd7e57518db4237d4ee26b214c41529', { 
-            serverZone: 'EU',
-            defaultTracking: { 
-                pageViews: true, sessions: true, fileDownloads: true, formInteractions: true 
-            } 
-        });">
+    <script src="https://cdn.eu.amplitude.com/script/YOUR_API_KEY.js"></script>
+    <script>
+    window.amplitude.init('2bd7e57518db4237d4ee26b214c41529', {
+        serverZone: 'EU',        
+        defaultTracking: {       
+        pageViews: true,
+        sessions: true
+        }
+    });
     </script>
 </head>
 <body class="bg-white text-slate-900">
