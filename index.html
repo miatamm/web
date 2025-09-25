@@ -16,10 +16,12 @@
     </script>
   
     <!-- Amplitude Analytics -->
-    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js"
-            onload="amplitude.init('2bd7e57518db4237d4ee26b214c41529', {
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.0-min.js" crossorigin="anonymous"
+        onload="amplitude.init('2bd7e57518db4237d4ee26b214c41529', { 
             serverZone: 'EU',
-            defaultTracking: { pageViews: true, sessions: true, fileDownloads: true, formInteractions: true }
+            defaultTracking: { 
+                pageViews: true, sessions: true, fileDownloads: true, formInteractions: true 
+            } 
         });">
     </script>
 </head>
